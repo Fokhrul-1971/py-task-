@@ -21,7 +21,7 @@ Build a command-line tool that checks the health of a computer and reports probl
 
 **Requirements:**
 1. Menu-driven loop, same pattern as your converter: check CPU, check memory, check disk, view all results so far, exit.
-2. For each check, ask the user to manually enter a value (e.g., "CPU usage %: ", "Disk usage %: ") — you're not reading real system data yet, just simulating it with input, which is fine for now.
+2. For each check, ask the user to manuaxm   lly enter a value (e.g., "CPU usage %: ", "Disk usage %: ") — you're not reading real system data yet, just simulating it with input, which is fine for now.
 3. Each value should be evaluated against a threshold: e.g., anything over 80% is a "warning," anything over 95% is "critical," otherwise "OK."
 4. Store every check performed in a list, with enough info to say what was checked, the value, and the status — not just a bare number (this forces you to actually solve the labeling problem you've been stuck on).
 5. When the user chooses "view all results," print a clean report of everything checked so far.
