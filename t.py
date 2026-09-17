@@ -1,13 +1,13 @@
 l=[]
 for i in range(7):
-   w = int(input(inter the num))
+   w = int(input('inter the num'))
    if w < 0 :
       print ('negative')
       continue
    elif w == 0 :
       print ('zero')
       continue
-   elif w % 2 = 0 :
+   elif w % 2 == 0 :
       print('evan')
       l.append(w)
    else :
@@ -22,11 +22,10 @@ for x in l:
       s=x 
 print(f'the totel is {e} the smollest is {s} ')
 
-2nd 
 
 m = []
 for i in range(6):
-   w = int(input(inter the num))
+   w = int(input('inter the num'))
    if w < 0 :
       print ('negative')
       continue
