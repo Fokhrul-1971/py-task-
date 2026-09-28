@@ -1,32 +1,43 @@
-**Revision — everything you've actually used so far:**
 
-- **Variables** — storing values (`value1`, `lis`, `opto`)
-- **Data types** — `int`, `str`, `bool`
-- **Input/output** — `input()`, `print()`, f-strings (`f'{x}'`), rounding with `:.4f`
-- **Conditionals** — `if`/`elif`/`else`
-- **Loops** — `while True`, `break` to exit
-- **Lists** — `[]`, `.append()`
-- **Error handling** — `try`/`except`
-- **Still open, not fixed yet:** making `try`/`except` actually skip the broken iteration (that's `continue`, the loop-cousin of `break` you haven't used yet); properly labeling results
+server = []
+while True :
+    print('''
+1. Add server
+2. Remove server
+3. Show servers
+4. Search server
+5. Server statistics
+0. Exit''')
+    try:
+        v1ue = int(input(':-'))
+    except ValueError:
+        print('enter the valide num')
+        continue
+    if v1ue == 0:
+        print ("exiting the inventory")
+        break 
+    elif v1ue == 1 :
+        v2ue = input('enter tehe name of serve you want to add \n:-')
+        print(f'adding {v2ue} in server')
+        server.append(v2ue)
+    elif v1ue == 2 :
+        if not server:
+            print('server is empty')
+            continue
+        else:
+            v3ue = int(input(f'entre the num of server for delete like for {server[0]} enter 1 {server[1]} enter 2 ........\n:-')) - 1
+            print(f'deleteing the {v3ue} ')
+            del server[v3ue]
+    elif v1ue == 3:
+        for i in server:
+            print(i)
+    elif v1ue == 4 :
+        v4ue = input(f'enter the name of server for serch \n:-')
+        if v4ue in server :
+            print(f'{v4ue} in {server}')
+        else:
+            print(f'{v4ue} not in {server}')
+    elif v1ue == 5:
+        print('the server lan is' , len(server))
+        print(f'the servers is \n{server}')
 
-That's genuinely a solid toolkit already — most beginner courses take months to cover this much.
-
-**The real-life useful task: a System Health Checker**
-
-This is the actual project your roadmap has been building toward, and it's something real DevOps engineers run in practice — not a toy exercise.
-
-**Task, spec-style:**
-
-Build a command-line tool that checks the health of a computer and reports problems.
-
-**Requirements:**
-1. Menu-driven loop, same pattern as your converter: check CPU, check memory, check disk, view all results so far, exit.
-2. For each check, ask the user to manuaxm   lly enter a value (e.g., "CPU usage %: ", "Disk usage %: ") — you're not reading real system data yet, just simulating it with input, which is fine for now.
-3. Each value should be evaluated against a threshold: e.g., anything over 80% is a "warning," anything over 95% is "critical," otherwise "OK."
-4. Store every check performed in a list, with enough info to say what was checked, the value, and the status — not just a bare number (this forces you to actually solve the labeling problem you've been stuck on).
-5. When the user chooses "view all results," print a clean report of everything checked so far.
-6. Handle bad input (someone types "high" instead of a number) using `try`/`except` — and this time, make sure it actually goes back to the menu cleanly instead of crashing on the next line, using `continue`.
-
-**Why this one specifically:** it uses every single concept you just listed, in a shape that's genuinely useful — this is a simplified version of real monitoring tools. Once it works with manual input, the natural next step (weeks from now) is swapping the manual `input()` calls for real system data using Python's `psutil` library — same structure, real data.
-
-Build it from scratch. Paste it when you're done or stuck, same as before.n
