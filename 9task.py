@@ -10,7 +10,7 @@ while True:
         lpo.append(klo)
         print(f'{klo} is added')
     elif lam == '2' :
-        mnp = int(input(f'{lpo}\nfor delete schose like {lop[0]} press (1)\n:')) - 1
+        mnp = int(input(f'{lpo}\nfor delete schose like press (1)\n:')) - 1
         print(f'{lpo[mnp]} is deleted')
         del lpo[mnp]
     elif lam == '3':

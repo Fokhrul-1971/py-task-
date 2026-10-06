@@ -1,0 +1,16 @@
+1. Finding what to learn
+Open 10 junior Linux, cloud or sysadmin job posts (LinkedIn, Indeed) in the country you want.
+Write down the tools that appear in most of them. If something appears in 7 of 10, learn it. If it appears once, skip it.
+Compare your list with the checklist and add anything important that's missing. roadmap.sh has a free DevOps map if you want a second view.
+2. How to learn
+Use the same loop for every topic:
+Read or watch a little (30 to 60 minutes at most).
+Do it yourself in the terminal, without copying line by line.
+Break it on purpose, then fix it.
+Write 5 lines about what you did in a README on GitHub.
+Most of your time should go on steps 2 and 3, not on watching videos. Use the official docs and free sources like Linux Journey, freeCodeCamp and the Docker and AWS docs. Use me as a tutor: paste your errors and ask "why did this happen?" instead of asking for finished answers.
+3. How the checklist works
+It's a to-do list. Each line is one skill.
+Go from top to bottom. Phase 1 comes before Phase 2.
+Tick a line only when you can do it from scratch, without a guide, and explain it in your own words.
+If you can't, stay on that line. Moving on too early is the most common reason people get stuck later.
